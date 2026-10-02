@@ -6,9 +6,9 @@ Practical Assignment 2 (TP2) for the **Programming Languages** course, PUCRS / S
 
 ## Team
 
-- [Name 1]
-- [Name 2]
-- [Name 3]
+- Antonio Augusto Fell Dal Bem
+- Arthur de Oliveira Ferreira
+- Lorenzo Santos de Souza de Moraes Bueno
 
 ## Problem
 
@@ -200,10 +200,6 @@ java-naming-checker/
     ├── NamingUtils.java
     └── Violation.java
 ```
-
-## Presentation video
-
-[Video link]
 
 ## Credits
 
