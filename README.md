@@ -61,7 +61,6 @@ ClassOrInterfaceDeclaration  "minha_classe"    ← should be MinhaClasse
 - Java 17
 - [JavaParser](https://javaparser.org/) (`com.github.javaparser:javaparser-core:3.26.2`): Java parser and AST (third-party library).
 - Maven + `exec-maven-plugin`
-- [Additional references from the team]
 
 ## Prerequisites
 
@@ -71,7 +70,7 @@ ClassOrInterfaceDeclaration  "minha_classe"    ← should be MinhaClasse
 ## Installation and usage
 
 ```bash
-git clone https://github.com/[username]/java-naming-checker.git
+git clone https://github.com/LorenzoBueno/java-naming-checker.git
 cd java-naming-checker
 
 # check only
