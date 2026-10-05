@@ -75,10 +75,10 @@ git clone https://github.com/[username]/java-naming-checker.git
 cd java-naming-checker
 
 # check only
-mvn -q compile exec:java -Dexec.args="exemplos/Exemplo2.java"
+mvn -q compile exec:java -Dexec.args="exemplos/conta_bancaria.java"
 
 # check and generate the fixed code (extension)
-mvn -q compile exec:java -Dexec.args="exemplos/Exemplo3.java --fix"
+mvn -q compile exec:java -Dexec.args="exemplos/Relatorio.java --fix"
 ```
 
 ## Examples
@@ -87,7 +87,7 @@ The input files are in the `exemplos/` folder.
 
 ### Example 1: Code with no violations
 
-**Input** (`exemplos/Exemplo1.java`):
+**Input** (`exemplos/ContaBancaria.java`):
 
 ```java
 public class ContaBancaria {
@@ -112,7 +112,7 @@ Nenhuma violação encontrada.
 
 ### Example 2: Class and methods that break the conventions
 
-**Input** (`exemplos/Exemplo2.java`):
+**Input** (`exemplos/conta_bancaria.java`):
 
 ```java
 public class conta_bancaria {
@@ -141,7 +141,7 @@ public class conta_bancaria {
 
 ### Example 3: Constant, field, parameters, and variable that break the conventions
 
-**Input** (`exemplos/Exemplo3.java`):
+**Input** (`exemplos/Relatorio.java`):
 
 ```java
 public class Relatorio {
@@ -173,7 +173,7 @@ public class Relatorio {
 With the `--fix` flag, besides the report, the tool **transforms the AST**: it builds a map of `invalid name → suggested name`, walks all `SimpleName` nodes, and replaces the identifier (`setIdentifier`). It then prints the modified AST with `cu.toString()` and writes the result to `<file>.corrigido.txt`.
 
 ```bash
-mvn -q compile exec:java -Dexec.args="exemplos/Exemplo3.java --fix"
+mvn -q compile exec:java -Dexec.args="exemplos/Relatorio.java --fix"
 ```
 
 Because the rename happens on the AST, declarations and their usages are renamed together (for example, `ValorA` in the parameter declaration and in the expression `ValorA + valor_b`).
@@ -191,9 +191,9 @@ Because the rename happens on the AST, declarations and their usages are renamed
 java-naming-checker/
 ├── pom.xml
 ├── exemplos/
-│   ├── Exemplo1.java
-│   ├── Exemplo2.java
-│   └── Exemplo3.java
+│   ├── ContaBancaria.java
+│   ├── conta_bancaria.java
+│   └── Relatorio.java
 └── src/main/java/br/pucrs/plp/
     ├── Main.java
     ├── NameVisitor.java
